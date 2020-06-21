@@ -15,12 +15,12 @@ stages:
   - job: StartGridJob
     steps:
     - bash: docker-compose up -d hub chrome firefox
-stage: RunTest
+- stage: RunTest
   jobs:
   - job: RunTestJob
     steps:
     - bash: docker-compose up search-module book-flight-module
-stage: Post
+- stage: Post
   jobs:
   - job: PostJob
     steps:
