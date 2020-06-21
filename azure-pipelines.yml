@@ -9,4 +9,4 @@ stages:
   jobs:
   - job: PullLatestImageJob
     steps:
-    - bash: sh "docker pull akbarchandani/selenium-docker-linux"
+    - bash: docker pull akbarchandani/selenium-docker-linux
