@@ -1,0 +1,12 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Pull Latest Image
+  jobs:
+  - job: PullLatestImageJob
+    steps:
+    - bash: sh "docker pull akbarchandani/selenium-docker-linux"
