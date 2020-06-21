@@ -10,3 +10,8 @@ stages:
   - job: PullLatestImageJob
     steps:
     - bash: docker pull akbarchandani/selenium-docker-linux
+- stage: StartGrid
+  jobs:
+  - job: StartGridJob
+    steps:
+    - bash: docker-compose up -d hub chrome firefox   
